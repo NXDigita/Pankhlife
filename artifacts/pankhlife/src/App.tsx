@@ -17,6 +17,7 @@ import ContactPage from "@/pages/ContactPage";
 import AdminPage from "@/pages/AdminPage";
 import BlogPage from "@/pages/BlogPage";
 import BlogPostPage from "@/pages/BlogPostPage";
+import BookTrialPage from "@/pages/BookTrialPage";
 import NotFound from "@/pages/not-found";
 
 const queryClient = new QueryClient();
@@ -72,6 +73,7 @@ function App() {
                 <Route path="/admin" component={AdminPage} />
                 <Route path="/blog" component={BlogPage} />
                 <Route path="/blog/:slug" component={BlogPostPage} />
+                <Route path="/book-trial" component={BookTrialPage} />
                 <Route component={NotFound} />
               </Switch>
             </Layout>

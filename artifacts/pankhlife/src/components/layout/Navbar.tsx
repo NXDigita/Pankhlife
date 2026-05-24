@@ -78,6 +78,14 @@ export function Navbar({ cartCount = 0, onCartClick }: NavbarProps) {
 
           {/* Right Actions */}
           <div className="flex items-center gap-2">
+            <Link
+              href="/book-trial"
+              className="hidden lg:inline-flex items-center gap-1.5 bg-primary text-primary-foreground text-xs font-sans font-medium px-4 py-2 rounded-lg hover:bg-primary/90 transition-colors"
+              data-testid="nav-book-trial"
+            >
+              Book Free Trial
+            </Link>
+
             <Button
               variant="ghost"
               size="icon"
@@ -140,6 +148,13 @@ export function Navbar({ cartCount = 0, onCartClick }: NavbarProps) {
                   {link.label}
                 </Link>
               ))}
+              <Link
+                href="/book-trial"
+                className="mt-1 flex items-center justify-center gap-2 bg-primary text-primary-foreground text-sm font-sans font-medium px-3 py-2.5 rounded-lg hover:bg-primary/90 transition-colors"
+                data-testid="mobile-nav-book-trial"
+              >
+                🌿 Book Your Free Trial Class
+              </Link>
               <div className="flex gap-2 mt-3 pt-3 border-t border-border">
                 <Button
                   variant="ghost"
