@@ -18,6 +18,7 @@ const navLinks = [
   { href: "/schedule", label: "Schedule" },
   { href: "/workshops", label: "Workshops" },
   { href: "/shop", label: "Shop" },
+  { href: "/blog", label: "Blog" },
   { href: "/contact", label: "Contact" },
 ];
 

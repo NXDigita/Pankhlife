@@ -15,6 +15,8 @@ import WorkshopsPage from "@/pages/WorkshopsPage";
 import ShopPage from "@/pages/ShopPage";
 import ContactPage from "@/pages/ContactPage";
 import AdminPage from "@/pages/AdminPage";
+import BlogPage from "@/pages/BlogPage";
+import BlogPostPage from "@/pages/BlogPostPage";
 import NotFound from "@/pages/not-found";
 
 const queryClient = new QueryClient();
@@ -68,6 +70,8 @@ function App() {
                 <Route path="/shop" component={() => <ShopPage onAddToCart={handleAddToCart} />} />
                 <Route path="/contact" component={ContactPage} />
                 <Route path="/admin" component={AdminPage} />
+                <Route path="/blog" component={BlogPage} />
+                <Route path="/blog/:slug" component={BlogPostPage} />
                 <Route component={NotFound} />
               </Switch>
             </Layout>
