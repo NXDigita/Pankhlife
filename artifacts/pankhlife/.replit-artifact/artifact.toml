@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/"
+title = "Pankhlife.in — Yoga & Wellness"
+version = "1.0.0"
+id = "artifacts/pankhlife"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 23919
+
+[services.development]
+run = "pnpm --filter @workspace/pankhlife run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/pankhlife", "run", "build" ]
+publicDir = "artifacts/pankhlife/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "23919"
+BASE_PATH = "/"

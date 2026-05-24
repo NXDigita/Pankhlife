@@ -1,0 +1,193 @@
+Build a premium modern responsive yoga and wellness website for a professional yoga teacher and wellness coach.
+
+Website Name: Pankhlife.in
+
+Founder:
+Ms. Renu Patil
+15+ Years of Experience in Yoga & Wellness
+
+Website Goal:
+The website should help:
+1. Showcase yoga classes and wellness programs
+2. Sell yoga-related products through a small ecommerce section
+3. Promote workshops and special campaigns
+4. Allow users to book classes
+5. Build trust and attract new students
+6. Generate leads via WhatsApp and contact forms
+
+Design Inspiration:
+Take UI/UX inspiration from:
+https://www.bodhischoolofyoga.com/
+
+Style Requirements:
+- Elegant, calming, premium wellness aesthetic
+- Minimal and modern layout
+- Soft earthy yoga color palette:
+  Sage green
+  Warm beige
+  Off white
+  Light sand
+  Soft lavender accents
+- Smooth animations and transitions
+- Large hero images/video
+- Rounded cards
+- Clean typography
+- Mobile-first responsive design
+- Luxury wellness brand feel
+
+Tech Stack:
+- React + Vite
+- Tailwind CSS
+- Framer Motion animations
+- React Router
+- Shadcn UI components
+- Lucide React icons
+- Firebase or Supabase ready architecture
+- Fully componentized structure
+
+Pages Required:
+
+1. Home Page
+Sections:
+- Hero section with calming yoga image/video
+- Headline:
+  “Transform Your Mind, Body & Life Naturally”
+- Subheadline:
+  “15+ Years of Experience in Yoga, Wellness & Holistic Healing”
+- CTA buttons:
+  “Book a Class”
+  “Join WhatsApp”
+- About Ms. Renu Patil section
+- Benefits of Yoga section
+- Featured Classes
+- Testimonials carousel
+- Upcoming Workshops & Events
+- Special Campaign Banner
+- Product showcase section
+- Instagram gallery
+- FAQ section
+- Footer
+
+2. About Page
+- Detailed story of Ms. Renu Patil
+- Mission & philosophy
+- Experience timeline
+- Certifications
+- Wellness approach
+- Images section
+
+3. Classes Page
+Include:
+- Morning Yoga
+- Meditation
+- Weight Loss Yoga
+- Pranayama
+- Therapy Yoga
+- Online Classes
+- Offline Classes
+
+Each class should have:
+- image
+- duration
+- timing
+- difficulty level
+- pricing
+- CTA
+
+4. Schedule Page
+Create a beautiful timetable layout:
+- Daily schedule
+- Weekly calendar
+- Morning/evening sessions
+- Filter by class type
+
+5. Workshops & Campaigns Page
+Important Feature:
+Admin should be able to create:
+- Special yoga campaigns
+- Festival offers
+- Discount offers
+- Limited-time workshops
+
+Each campaign card should include:
+- Countdown timer
+- Offer badge
+- CTA
+- Discount percentage
+- Banner image
+
+6. Ecommerce Store Page
+Small ecommerce functionality:
+Products:
+- Yoga mats
+- Yoga accessories
+- Herbal wellness products
+- Meditation items
+
+Features:
+- Product cards
+- Product details page
+- Add to cart
+- Checkout UI
+- Wishlist
+- Product categories
+- Ratings
+- Search and filter
+
+7. Contact Page
+Include:
+- WhatsApp button
+- Contact form
+- Google Maps
+- Social links
+- Inquiry section
+
+Special Features:
+- Floating WhatsApp CTA
+- Sticky navbar
+- Dark/light mode
+- SEO optimized
+- Fast loading
+- Blog-ready structure
+- Newsletter signup
+- Animated counters
+- Student success statistics
+- Before/after transformation section
+- Meditation music section
+- AI chatbot placeholder
+
+Admin Dashboard (Basic UI):
+Create an admin panel UI for:
+- Managing schedules
+- Adding workshops
+- Creating discount campaigns
+- Uploading products
+- Managing testimonials
+
+Homepage Copywriting Tone:
+- Warm
+- Spiritual
+- Trustworthy
+- Empowering
+- Premium wellness feel
+
+Suggested Sections:
+- “Heal Naturally”
+- “Awaken Your Inner Balance”
+- “Yoga for Every Age”
+- “Join 1000+ Happy Students”
+
+Important:
+- Use high-quality yoga and wellness placeholder images
+- Add elegant hover effects
+- Add scroll animations
+- Use premium spacing and modern UI practices
+- Make it feel like a luxury yoga wellness brand
+
+Deliver:
+- Full frontend code
+- Proper folder structure
+- Reusable components
+- Responsive design
+- Clean architecture
+- Production-ready UI
