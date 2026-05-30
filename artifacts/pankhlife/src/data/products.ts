@@ -34,7 +34,7 @@ export const products: Product[] = [
     category: "Yoga Mats",
     rating: 4.7,
     reviews: 84,
-    image: "https://images.unsplash.com/photo-1594381898411-846e7d193883?w=500&q=80",
+    image: "/mat.webp",
     inStock: true,
   },
   {
@@ -46,7 +46,7 @@ export const products: Product[] = [
     category: "Accessories",
     rating: 4.8,
     reviews: 201,
-    image: "https://images.unsplash.com/photo-1607677568507-58ff2800b75e?w=500&q=80",
+    image: "/yogastrap.jpg",
     badge: "Sale",
     inStock: true,
   },
@@ -58,7 +58,7 @@ export const products: Product[] = [
     category: "Meditation",
     rating: 4.9,
     reviews: 67,
-    image: "https://images.unsplash.com/photo-1545205597-3d9d02c29597?w=500&q=80",
+    image: "/cusion.jpg",
     inStock: true,
   },
   {

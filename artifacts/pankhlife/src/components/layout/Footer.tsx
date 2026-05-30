@@ -3,6 +3,7 @@ import { Leaf, Instagram, Facebook, Youtube, MessageCircle, Mail, Phone, MapPin 
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useState } from "react";
+import { PankhLogo } from "./PankhLogo";
 
 export function Footer() {
   const [email, setEmail] = useState("");
@@ -18,11 +19,8 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Brand */}
           <div className="col-span-1 lg:col-span-1">
-            <div className="flex items-center gap-2 mb-4">
-              <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center">
-                <Leaf className="h-4 w-4 text-primary-foreground" />
-              </div>
-              <span className="font-serif text-xl font-semibold">Pankhlife</span>
+            <div className="flex flex-col items-start gap-1 mb-4">
+              <PankhLogo variant="full" className="h-16 w-auto object-contain" />
             </div>
             <p className="text-sm text-muted-foreground leading-relaxed mb-6">
               Awakening wellness, one breath at a time. Guided by Ms. Renu Patil — 15+ years of transforming lives through the ancient wisdom of yoga.
@@ -72,7 +70,7 @@ export function Footer() {
             <ul className="space-y-3">
               <li className="flex items-start gap-2 text-sm text-muted-foreground">
                 <Phone className="h-4 w-4 mt-0.5 text-primary flex-shrink-0" />
-                <span>+91 98765 43210</span>
+                <span>+91 95401 16007</span>
               </li>
               <li className="flex items-start gap-2 text-sm text-muted-foreground">
                 <Mail className="h-4 w-4 mt-0.5 text-primary flex-shrink-0" />
@@ -80,7 +78,7 @@ export function Footer() {
               </li>
               <li className="flex items-start gap-2 text-sm text-muted-foreground">
                 <MapPin className="h-4 w-4 mt-0.5 text-primary flex-shrink-0" />
-                <span>Andheri West, Mumbai — 400058</span>
+                <span>HNO A1-201 Mapsko Casabella, Gurugram</span>
               </li>
             </ul>
             <a

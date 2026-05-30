@@ -253,7 +253,7 @@ function StepPickSlot({
                           ) : (
                             <MapPin className="h-3 w-3 text-primary" />
                           )}
-                          {slot.mode === "online" ? "Online (Zoom)" : "Studio — Andheri West"}
+                          {slot.mode === "online" ? "Online (Zoom)" : "Studio — Gurugram"}
                         </p>
                       </div>
                     </div>
@@ -360,7 +360,7 @@ function StepPersonalDetails({
           <Input
             id="phone"
             type="tel"
-            placeholder="+91 98765 43210"
+            placeholder="+91 95401 16007"
             value={booking.phone}
             onChange={(e) => onChange("phone", e.target.value)}
             data-testid="field-phone"
@@ -469,7 +469,7 @@ function StepConfirmed({ booking }: { booking: BookingDetails }) {
                 <p className="text-sm font-medium">{slot?.day} · {slot?.time} – {slot?.endTime}</p>
                 <p className="text-xs text-muted-foreground flex items-center gap-1 mt-0.5">
                   {slot?.mode === "online" ? <Wifi className="h-3 w-3" /> : <MapPin className="h-3 w-3" />}
-                  {slot?.mode === "online" ? "Online (Zoom link will be sent)" : "Studio — Andheri West, Mumbai"}
+                  {slot?.mode === "online" ? "Online (Zoom link will be sent)" : "Studio — Gurugram"}
                 </p>
               </div>
             </div>

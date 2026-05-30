@@ -5,6 +5,7 @@ import { Menu, X, ShoppingCart, Sun, Moon, Leaf } from "lucide-react";
 import { useTheme } from "@/components/ThemeProvider";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import { PankhLogo } from "./PankhLogo";
 
 interface NavbarProps {
   cartCount?: number;
@@ -49,15 +50,11 @@ export function Navbar({ cartCount = 0, onCartClick }: NavbarProps) {
           {/* Logo */}
           <Link
             href="/"
-            className="flex items-center gap-2 group"
+            className="flex items-center gap-2 group py-1"
             data-testid="link-logo"
           >
-            <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center">
-              <Leaf className="h-4 w-4 text-primary-foreground" />
-            </div>
-            <span className="font-serif text-xl font-semibold text-foreground tracking-wide">
-              Pankhlife
-            </span>
+            <PankhLogo variant="navbar" className="h-10 sm:h-12 w-auto object-contain" />
+            <span className="text-xl sm:text-2xl font-serif font-semibold text-primary tracking-wide ml-2">Pankhlife</span>
           </Link>
 
           {/* Desktop Nav */}

@@ -26,7 +26,7 @@ export const classes: YogaClass[] = [
     originalPrice: 1500,
     type: "both",
     session: "morning",
-    image: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=600&q=80",
+    image: "/renu_forward_fold.png",
     benefits: ["Boosts energy", "Improves flexibility", "Mental clarity"],
   },
   {
@@ -55,7 +55,7 @@ export const classes: YogaClass[] = [
     originalPrice: 2000,
     type: "offline",
     session: "evening",
-    image: "https://images.unsplash.com/photo-1552196563-55cd4e45efb3?w=600&q=80",
+    image: "/renu_arm_balance_1.png",
     benefits: ["Weight management", "Better digestion", "Core strength"],
   },
   {
@@ -69,7 +69,7 @@ export const classes: YogaClass[] = [
     price: 899,
     type: "both",
     session: "morning",
-    image: "https://images.unsplash.com/photo-1498277644168-46c7f8583777?w=600&q=80",
+    image: "/pranayama.jpg",
     benefits: ["Lung health", "Stress relief", "Increased vitality"],
   },
   {
@@ -83,7 +83,7 @@ export const classes: YogaClass[] = [
     price: 2000,
     type: "offline",
     session: "morning",
-    image: "https://images.unsplash.com/photo-1575052814086-f385e2e2ad1b?w=600&q=80",
+    image: "/renu_arm_balance_2.png",
     benefits: ["Pain relief", "Improved mobility", "Personalised care"],
   },
   {

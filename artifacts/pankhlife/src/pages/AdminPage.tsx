@@ -385,7 +385,7 @@ export default function AdminPage() {
                     <CardHeader><CardTitle className="font-serif text-lg">Studio Information</CardTitle></CardHeader>
                     <CardContent className="space-y-4">
                       <div><Label className="text-sm mb-1.5 block">Studio Name</Label><Input defaultValue="Pankhlife.in" /></div>
-                      <div><Label className="text-sm mb-1.5 block">WhatsApp Number</Label><Input defaultValue="+91 98765 43210" /></div>
+                      <div><Label className="text-sm mb-1.5 block">WhatsApp Number</Label><Input defaultValue="+91 95401 16007" /></div>
                       <div><Label className="text-sm mb-1.5 block">Email</Label><Input defaultValue="renu@pankhlife.in" /></div>
                       <Button className="font-sans w-full" onClick={() => showToast("Settings saved")} data-testid="save-settings-btn">Save Changes</Button>
                     </CardContent>
@@ -396,7 +396,7 @@ export default function AdminPage() {
                     <CardHeader><CardTitle className="font-serif text-lg">Notifications</CardTitle></CardHeader>
                     <CardContent className="space-y-4">
                       <div><Label className="text-sm mb-1.5 block">Email for Bookings</Label><Input defaultValue="renu@pankhlife.in" /></div>
-                      <div><Label className="text-sm mb-1.5 block">SMS Alerts</Label><Input defaultValue="+91 98765 43210" /></div>
+                      <div><Label className="text-sm mb-1.5 block">SMS Alerts</Label><Input defaultValue="+91 95401 16007" /></div>
                       <Button variant="outline" className="font-sans w-full" onClick={() => showToast("Notification preferences saved")}>Update Preferences</Button>
                     </CardContent>
                   </Card>

@@ -10,7 +10,7 @@ const stagger = { visible: { transition: { staggerChildren: 0.12 } } };
 
 const timeline = [
   { year: "2008", title: "First Yoga Certification", desc: "Completed 200-hour Hatha Yoga Teacher Training from Bihar School of Yoga." },
-  { year: "2010", title: "Opened First Studio", desc: "Founded the first Pankhlife yoga studio in Andheri, Mumbai with 20 founding students." },
+  { year: "2010", title: "Opened First Studio", desc: "Founded the first Pankhlife yoga studio in Gurugram with 20 founding students." },
   { year: "2013", title: "Advanced Therapy Training", desc: "Completed advanced therapeutic yoga specialisation for musculoskeletal conditions." },
   { year: "2015", title: "500-Hour Certification", desc: "Received 500-hour advanced yoga teacher certification — one of India's top programmes." },
   { year: "2018", title: "Ayurveda Integration", desc: "Completed diploma in Ayurvedic wellness coaching and integrated it into all programmes." },
@@ -40,7 +40,7 @@ export default function AboutPage() {
       <section className="relative h-72 sm:h-96 flex items-center justify-center overflow-hidden">
         <img
           src="https://images.unsplash.com/photo-1603988363607-e1e4a66962c6?w=1400&q=80"
-          alt="About Ms. Renu Patil"
+          alt="Yoga practice"
           className="absolute inset-0 w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-black/50" />
@@ -76,8 +76,8 @@ export default function AboutPage() {
           </motion.div>
           <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }}>
             <img
-              src="https://images.unsplash.com/photo-1591348278863-a8fb3887e2aa?w=700&q=80"
-              alt="Yoga practice"
+              src="/renu_arm_balance_1.png"
+              alt="Ms. Renu Patil practicing arm balance"
               className="rounded-3xl w-full h-[480px] object-cover shadow-lg"
             />
           </motion.div>

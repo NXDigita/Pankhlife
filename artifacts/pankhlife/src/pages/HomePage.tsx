@@ -78,11 +78,11 @@ export default function HomePage({ onAddToCart }: HomePageProps) {
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="https://images.unsplash.com/photo-1545389336-cf090694435e?w=1600&q=80"
+            src="/heroimage.png"
             alt="Yoga practice"
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover object-center"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/30 to-black/60" />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#4A5120]/40 via-[#4A5120]/30 to-[#4A5120]/40" />
         </div>
         <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
           <motion.div
@@ -161,7 +161,7 @@ export default function HomePage({ onAddToCart }: HomePageProps) {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }}>
             <img
-              src="https://images.unsplash.com/photo-1603988363607-e1e4a66962c6?w=700&q=80"
+              src="/renu_headstand.png"
               alt="Ms. Renu Patil"
               className="rounded-3xl w-full max-h-[520px] object-cover shadow-lg"
             />

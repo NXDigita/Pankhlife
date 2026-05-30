@@ -13,9 +13,9 @@ const fadeUp = { hidden: { opacity: 0, y: 24 }, visible: { opacity: 1, y: 0 } };
 const stagger = { visible: { transition: { staggerChildren: 0.1 } } };
 
 const contactInfo = [
-  { icon: <Phone className="h-5 w-5" />, label: "Phone", value: "+91 98765 43210", href: "tel:+919876543210" },
+  { icon: <Phone className="h-5 w-5" />, label: "Phone", value: "+91 95401 16007", href: "tel:+919540116007" },
   { icon: <Mail className="h-5 w-5" />, label: "Email", value: "renu@pankhlife.in", href: "mailto:renu@pankhlife.in" },
-  { icon: <MapPin className="h-5 w-5" />, label: "Location", value: "Andheri West, Mumbai — 400058", href: "#" },
+  { icon: <MapPin className="h-5 w-5" />, label: "Location", value: "HNO A1-201 Mapsko Casabella, Gurugram", href: "#" },
   { icon: <Clock className="h-5 w-5" />, label: "Studio Hours", value: "Mon–Sat: 6 AM – 8 PM | Sun: 7 AM – 12 PM", href: "#" },
 ];
 
@@ -110,7 +110,7 @@ export default function ContactPage() {
                 <motion.div variants={fadeUp} className="grid sm:grid-cols-2 gap-4">
                   <div>
                     <Label htmlFor="phone" className="font-sans text-sm mb-1.5 block">Phone Number</Label>
-                    <Input id="phone" type="tel" placeholder="+91 98765 43210" value={form.phone}
+                    <Input id="phone" type="tel" placeholder="+91 95401 16007" value={form.phone}
                       onChange={(e) => setForm({ ...form, phone: e.target.value })}
                       data-testid="contact-phone" />
                   </div>
@@ -196,7 +196,7 @@ export default function ContactPage() {
             {/* Map */}
             <motion.div variants={fadeUp} className="rounded-2xl overflow-hidden border border-border h-64 bg-muted">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3769.5048783700574!2d72.82741687504515!3d19.13336678208037!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b63aceef0d73%3A0x7c81b0b517a5b7d7!2sAndheri%20West%2C%20Mumbai%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+                src="https://maps.google.com/maps?q=Mapsko+Casabella,+Gurugram&t=&z=13&ie=UTF8&iwloc=&output=embed"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
