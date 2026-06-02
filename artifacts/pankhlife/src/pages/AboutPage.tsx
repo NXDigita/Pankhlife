@@ -1,8 +1,10 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { ArrowRight, Award, Heart, Leaf } from "lucide-react";
 
 const fadeUp = { hidden: { opacity: 0, y: 24 }, visible: { opacity: 1, y: 0 } };
@@ -19,12 +21,46 @@ const timeline = [
 ];
 
 const certifications = [
-  "200-Hour Hatha Yoga TTC — Bihar School of Yoga",
-  "500-Hour Advanced Yoga TTC — Iyengar Yoga Institute",
-  "Therapeutic Yoga Certification — S-VYASA University",
-  "Ayurvedic Wellness Coach Diploma",
-  "Pranayama & Meditation — Himalayan Institute",
-  "Yoga for Women's Health — Yoga Alliance USA",
+  {
+    title: "200-Hour Yoga Teacher Training — Yoga Alliance (RYT 200)",
+    subtitle: "Bodhi Yoga Training Academy",
+    imageSrc: "/certifications/cert_1.png",
+  },
+  {
+    title: "300-Hour Yoga Teacher Training — Yoga Alliance (RYS 300)",
+    subtitle: "Bodhi Yoga Training Academy",
+    imageSrc: "/certifications/cert_2.png",
+  },
+  {
+    title: "Therapeutic Yoga Training",
+    subtitle: "Bodhi School of Yoga",
+    imageSrc: "/certifications/cert_3.png",
+  },
+  {
+    title: "Face Yoga Teacher Training Course",
+    subtitle: "Bodhi School of Yoga",
+    imageSrc: "/certifications/cert_4.png",
+  },
+  {
+    title: "Cancer Nutrition Course (Online)",
+    subtitle: "Unitus Health Academy",
+    imageSrc: "/certifications/cert_5.png",
+  },
+  {
+    title: "Weight Loss Coaching Program",
+    subtitle: "Bodhi School of Yoga",
+    imageSrc: "/certifications/cert_6.png",
+  },
+  {
+    title: "Meditation Teacher Training (Level 1)",
+    subtitle: "Bodhi School of Yoga",
+    imageSrc: "/certifications/cert_7.png",
+  },
+  {
+    title: "Prenatal Yoga Teacher Training",
+    subtitle: "Bodhi School of Yoga",
+    imageSrc: "/certifications/cert_8.png",
+  },
 ];
 
 const approach = [
@@ -34,6 +70,9 @@ const approach = [
 ];
 
 export default function AboutPage() {
+  const [selectedCert, setSelectedCert] =
+    useState<(typeof certifications)[number] | null>(null);
+
   return (
     <div>
       {/* Hero */}
@@ -139,18 +178,47 @@ export default function AboutPage() {
             <motion.h2 variants={fadeUp} className="font-serif text-3xl sm:text-4xl font-light">Certifications</motion.h2>
           </motion.div>
           <motion.div
-            className="grid sm:grid-cols-2 gap-4"
+            className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3"
             variants={stagger}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
           >
             {certifications.map((cert) => (
-              <motion.div key={cert} variants={fadeUp}>
-                <Card>
-                  <CardContent className="p-4 flex items-center gap-3">
-                    <Award className="h-5 w-5 text-primary flex-shrink-0" />
-                    <span className="text-sm">{cert}</span>
+              <motion.div key={cert.title} variants={fadeUp}>
+                <Card className="h-full overflow-hidden hover:shadow-md transition-shadow cursor-pointer">
+                  <CardContent className="p-0 h-full">
+                    <button
+                      type="button"
+                      className="w-full text-left h-full block focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+                      aria-label={`View certificate: ${cert.title}`}
+                      onClick={() => setSelectedCert(cert)}
+                      onKeyDown={(e) => {
+                        if (e.key === "Enter" || e.key === " ") setSelectedCert(cert);
+                      }}
+                    >
+                      <div className="bg-background/60 p-3">
+                        <div className="h-40 sm:h-44 w-full rounded-xl bg-muted/30 border overflow-hidden flex items-center justify-center">
+                          <img
+                            src={cert.imageSrc}
+                            alt={cert.title}
+                            loading="lazy"
+                            className="h-full w-full object-contain"
+                          />
+                        </div>
+                      </div>
+                      <div className="p-4">
+                        <div className="flex items-start gap-3">
+                          <div className="mt-0.5 w-9 h-9 rounded-full bg-primary/10 flex items-center justify-center text-primary flex-shrink-0">
+                            <Award className="h-4 w-4" />
+                          </div>
+                          <div className="min-w-0">
+                            <p className="font-serif text-base leading-snug">{cert.title}</p>
+                            <p className="text-xs text-muted-foreground mt-1">{cert.subtitle}</p>
+                          </div>
+                        </div>
+                      </div>
+                    </button>
                   </CardContent>
                 </Card>
               </motion.div>
@@ -158,6 +226,20 @@ export default function AboutPage() {
           </motion.div>
         </div>
       </section>
+
+      <Dialog open={!!selectedCert} onOpenChange={(open) => !open && setSelectedCert(null)}>
+        <DialogContent className="max-w-5xl p-0 overflow-hidden">
+          {selectedCert && (
+            <div className="bg-black/5 p-2 sm:p-4 flex items-center justify-center w-full">
+              <img
+                src={selectedCert.imageSrc}
+                alt={selectedCert.title}
+                className="w-full h-auto max-h-[85vh] object-contain shadow-sm bg-white rounded-none"
+              />
+            </div>
+          )}
+        </DialogContent>
+      </Dialog>
 
       {/* Approach */}
       <section className="py-20 px-4 max-w-5xl mx-auto">

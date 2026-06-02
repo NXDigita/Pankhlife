@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
 import { CountdownTimer } from "@/components/CountdownTimer";
 import { classes } from "@/data/classes";
@@ -66,8 +67,18 @@ const faqs = [
   { q: "Do you offer private one-on-one sessions?", a: "Yes. Private sessions with Ms. Renu are available for students with specific goals or medical conditions. Contact us to learn more." },
 ];
 
+const reviewScreenshots = [
+  { src: "/reviews/review-1.png", alt: "Client review screenshot 1" },
+  { src: "/reviews/review-2.png", alt: "Client review screenshot 2" },
+  { src: "/reviews/review-3.png", alt: "Client review screenshot 3" },
+  { src: "/reviews/review-4.png", alt: "Client review screenshot 4" },
+  { src: "/reviews/review-5.png", alt: "Client review screenshot 5" },
+  { src: "/reviews/review-6.png", alt: "Client review screenshot 6" },
+];
+
 export default function HomePage({ onAddToCart }: HomePageProps) {
   const [newsletterEmail, setNewsletterEmail] = useState("");
+  const [selectedReviewSrc, setSelectedReviewSrc] = useState<string | null>(null);
   const featuredClasses = classes.slice(0, 4);
   const featuredProducts = products.slice(0, 4);
   const featuredWorkshops = workshops.slice(0, 2);
@@ -305,8 +316,61 @@ export default function HomePage({ onAddToCart }: HomePageProps) {
               </motion.div>
             ))}
           </motion.div>
+
+          <motion.div
+            variants={stagger}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="mt-14"
+          >
+            <motion.div variants={fadeUp} className="text-center mb-8">
+              <p className="text-primary text-sm uppercase tracking-widest font-sans mb-2">
+                Client Reviews
+              </p>
+              <h3 className="font-serif text-2xl sm:text-3xl font-light">
+                Real messages from our clients
+              </h3>
+            </motion.div>
+
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
+              {reviewScreenshots.map((img) => (
+                <motion.div key={img.src} variants={fadeUp}>
+                  <button
+                    type="button"
+                    className="w-full rounded-xl overflow-hidden border bg-background hover:shadow-md transition-shadow focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+                    onClick={() => setSelectedReviewSrc(img.src)}
+                    aria-label="Open client review screenshot"
+                  >
+                    <div className="aspect-[3/4] bg-muted/20 flex items-center justify-center">
+                      <img
+                        src={img.src}
+                        alt={img.alt}
+                        loading="lazy"
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                  </button>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
         </div>
       </section>
+
+      <Dialog open={!!selectedReviewSrc} onOpenChange={(open) => !open && setSelectedReviewSrc(null)}>
+        <DialogContent className="max-w-5xl p-0 overflow-hidden">
+          {selectedReviewSrc && (
+            <div className="bg-black/5 p-2 sm:p-4 flex items-center justify-center w-full">
+              <img
+                src={selectedReviewSrc}
+                alt="Client review screenshot"
+                className="w-full h-auto max-h-[85vh] object-contain shadow-sm bg-white rounded-none"
+              />
+            </div>
+          )}
+        </DialogContent>
+      </Dialog>
 
       {/* Upcoming Workshops */}
       <section className="py-20 px-4 max-w-7xl mx-auto">
