@@ -63,7 +63,6 @@ const faqs = [
   { q: "Are the online classes as effective as in-person?", a: "Yes. Our live online sessions are interactive — you receive real-time corrections and personalised attention just as you would in the studio." },
   { q: "How many classes per week should a beginner attend?", a: "We recommend starting with 3 classes per week and building from there. Consistency matters far more than frequency." },
   { q: "Do you offer trial classes?", a: "Yes — your first class is complimentary. Reach out via WhatsApp or our contact form to schedule your trial." },
-  { q: "What should I bring to a studio class?", a: "A yoga mat (or borrow ours), comfortable clothing, a water bottle, and an empty or lightly filled stomach (avoid eating 2 hours before)." },
   { q: "Do you offer private one-on-one sessions?", a: "Yes. Private sessions with Ms. Renu are available for students with specific goals or medical conditions. Contact us to learn more." },
 ];
 
