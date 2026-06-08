@@ -101,18 +101,4 @@ export const classes: YogaClass[] = [
     image: "https://images.unsplash.com/photo-1599901860904-17e6ed7083a0?w=600&q=80",
     benefits: ["Practise anywhere", "Flexible schedule", "Recorded sessions"],
   },
-  {
-    id: "offline-classes",
-    title: "Offline Studio Classes",
-    description:
-      "In-person classes in our serene Mumbai studio. Small batches ensure personal attention, hands-on adjustments, and a deeply communal experience.",
-    duration: "75 min",
-    timing: "Multiple slots daily",
-    difficulty: "All Levels",
-    price: 1800,
-    type: "offline",
-    session: "flexible",
-    image: "https://images.unsplash.com/photo-1593810450967-f9c42742e326?w=600&q=80",
-    benefits: ["Personal attention", "Community", "Hands-on guidance"],
-  },
 ];
