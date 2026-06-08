@@ -223,9 +223,9 @@ export default function BlogPostPage() {
               </div>
               <div>
                 <p className="font-serif text-base font-medium">{post.author}</p>
-                <p className="text-xs text-muted-foreground mb-2">Yoga Teacher, Wellness Guide — 15+ Years Experience</p>
+                <p className="text-xs text-muted-foreground mb-2">Yoga Teacher, Wellness Guide — 24+ Years Experience</p>
                 <p className="text-sm text-muted-foreground leading-relaxed">
-                  Ms. Renu Patil is the founder of Pankhlife.in. She writes about yoga, Ayurveda, therapeutic movement, and the intersection of ancient wisdom and modern science.
+                  Ms. Renu Patial is the founder of Pankhlife.in. She writes about yoga, Ayurveda, therapeutic movement, and the intersection of ancient wisdom and modern science.
                 </p>
                 <Link href="/about">
                   <Button size="sm" variant="outline" className="mt-3 font-sans text-xs" data-testid="author-bio-link">

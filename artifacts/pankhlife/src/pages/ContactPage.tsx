@@ -55,7 +55,7 @@ export default function ContactPage() {
             <p className="text-sm text-muted-foreground">Get a response within hours — the quickest way to book a class or ask any question.</p>
           </div>
           <a
-            href="https://wa.me/911234567890"
+            href="https://wa.me/919540116007"
             target="_blank"
             rel="noopener noreferrer"
             data-testid="contact-whatsapp-btn"
@@ -181,7 +181,7 @@ export default function ContactPage() {
                       { icon: <Instagram className="h-5 w-5" />, href: "https://instagram.com/pankhlife", label: "Instagram" },
                       { icon: <Facebook className="h-5 w-5" />, href: "https://facebook.com/pankhlife", label: "Facebook" },
                       { icon: <Youtube className="h-5 w-5" />, href: "https://youtube.com/@pankhlife", label: "YouTube" },
-                      { icon: <MessageCircle className="h-5 w-5" />, href: "https://wa.me/911234567890", label: "WhatsApp" },
+                      { icon: <MessageCircle className="h-5 w-5" />, href: "https://wa.me/919540116007", label: "WhatsApp" },
                     ].map((s) => (
                       <a key={s.label} href={s.href} target="_blank" rel="noopener noreferrer"
                         className="text-muted-foreground hover:text-primary transition-colors" data-testid={`contact-social-${s.label.toLowerCase()}`}>

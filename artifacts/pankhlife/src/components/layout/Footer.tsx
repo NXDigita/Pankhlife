@@ -23,7 +23,7 @@ export function Footer() {
               <PankhLogo variant="full" className="h-16 w-auto object-contain" />
             </div>
             <p className="text-sm text-muted-foreground leading-relaxed mb-6">
-              Awakening wellness, one breath at a time. Guided by Ms. Renu Patil — 15+ years of transforming lives through the ancient wisdom of yoga.
+              Awakening wellness, one breath at a time. Guided by Ms. Renu Patial — 24+ years of transforming lives through the ancient wisdom of yoga.
             </p>
             <div className="flex items-center gap-3">
               <a href="https://instagram.com/pankhlife" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors" data-testid="social-instagram">
@@ -35,7 +35,7 @@ export function Footer() {
               <a href="https://youtube.com/@pankhlife" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors" data-testid="social-youtube">
                 <Youtube className="h-5 w-5" />
               </a>
-              <a href="https://wa.me/911234567890" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-green-500 transition-colors" data-testid="social-whatsapp">
+              <a href="https://wa.me/919540116007" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-green-500 transition-colors" data-testid="social-whatsapp">
                 <MessageCircle className="h-5 w-5" />
               </a>
             </div>
@@ -82,7 +82,7 @@ export function Footer() {
               </li>
             </ul>
             <a
-              href="https://wa.me/911234567890"
+              href="https://wa.me/919540116007"
               target="_blank"
               rel="noopener noreferrer"
               className="mt-4 inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white text-sm font-sans px-4 py-2 rounded-lg transition-colors"
@@ -118,7 +118,7 @@ export function Footer() {
 
         <div className="mt-12 pt-6 border-t border-border flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-xs text-muted-foreground">
-            &copy; {new Date().getFullYear()} Pankhlife.in — Ms. Renu Patil. All rights reserved.
+            &copy; {new Date().getFullYear()} Pankhlife.in — Ms. Renu Patial. All rights reserved.
           </p>
           <p className="text-xs text-muted-foreground">
             Crafted with love for wellness &amp; healing

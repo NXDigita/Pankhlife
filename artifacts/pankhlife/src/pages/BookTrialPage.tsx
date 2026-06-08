@@ -220,7 +220,7 @@ function StepPickSlot({
       {slots.length === 0 ? (
         <div className="text-center py-12 text-muted-foreground">
           <p>No slots found. Please reach out via WhatsApp to book.</p>
-          <a href="https://wa.me/911234567890" target="_blank" rel="noopener noreferrer" className="mt-4 inline-block">
+          <a href="https://wa.me/919540116007" target="_blank" rel="noopener noreferrer" className="mt-4 inline-block">
             <Button className="font-sans mt-4">Chat on WhatsApp</Button>
           </a>
         </div>
@@ -513,7 +513,7 @@ function StepConfirmed({ booking }: { booking: BookingDetails }) {
 
       {/* Actions */}
       <div className="flex flex-col sm:flex-row gap-3 justify-center">
-        <a href="https://wa.me/911234567890" target="_blank" rel="noopener noreferrer">
+        <a href="https://wa.me/919540116007" target="_blank" rel="noopener noreferrer">
           <Button variant="outline" className="font-sans gap-2 w-full sm:w-auto" data-testid="confirm-whatsapp">
             <MessageCircle className="h-4 w-4 text-green-500" />
             Chat on WhatsApp

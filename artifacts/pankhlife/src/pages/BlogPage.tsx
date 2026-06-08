@@ -79,7 +79,7 @@ export default function BlogPage() {
             transition={{ delay: 0.5 }}
             className="text-white/70 text-sm mt-3 font-sans max-w-md mx-auto"
           >
-            Deep dives into yoga philosophy, Ayurvedic wisdom, breathwork, nutrition, and student stories — written by Ms. Renu Patil.
+            Deep dives into yoga philosophy, Ayurvedic wisdom, breathwork, nutrition, and student stories — written by Ms. Renu Patial.
           </motion.p>
         </div>
       </section>
@@ -112,9 +112,8 @@ export default function BlogPage() {
             <motion.div key={post.id} variants={fadeUp} className={i === 0 ? "md:col-span-2" : ""}>
               <Link href={`/blog/${post.slug}`}>
                 <Card
-                  className={`overflow-hidden hover:shadow-xl transition-all duration-300 cursor-pointer group h-full ${
-                    i === 0 ? "md:flex" : ""
-                  }`}
+                  className={`overflow-hidden hover:shadow-xl transition-all duration-300 cursor-pointer group h-full ${i === 0 ? "md:flex" : ""
+                    }`}
                   data-testid={`featured-post-${post.id}`}
                 >
                   <div className={`relative overflow-hidden flex-shrink-0 ${i === 0 ? "md:w-64 h-56 md:h-auto" : "h-48"}`}>

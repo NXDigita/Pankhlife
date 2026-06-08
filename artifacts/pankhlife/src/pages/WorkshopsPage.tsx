@@ -41,7 +41,7 @@ export default function WorkshopsPage() {
             className="font-serif text-4xl sm:text-5xl font-light text-white">Workshops &amp; Campaigns</motion.h1>
           <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.5 }}
             className="text-white/70 text-sm mt-3 font-sans max-w-md mx-auto">
-            Transformative multi-day programmes, seasonal offers, and special events led by Ms. Renu Patil.
+            Transformative multi-day programmes, seasonal offers, and special events led by Ms. Renu Patial.
           </motion.p>
         </div>
       </section>

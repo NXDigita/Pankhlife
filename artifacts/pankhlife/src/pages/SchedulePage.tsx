@@ -198,7 +198,7 @@ function SlotCard({ slot }: { slot: typeof schedule[0] }) {
               {slot.spotsLeft} / {slot.spotsTotal} spots left
               {slot.spotsLeft <= 3 && <Badge variant="destructive" className="text-xs ml-1">Almost Full</Badge>}
             </span>
-            <a href="https://wa.me/911234567890" target="_blank" rel="noopener noreferrer">
+            <a href="https://wa.me/919540116007" target="_blank" rel="noopener noreferrer">
               <Button size="sm" className="font-sans text-xs" data-testid={`book-slot-${slot.id}`}>
                 Book This Class
               </Button>

@@ -11,13 +11,21 @@ const fadeUp = { hidden: { opacity: 0, y: 24 }, visible: { opacity: 1, y: 0 } };
 const stagger = { visible: { transition: { staggerChildren: 0.12 } } };
 
 const timeline = [
-  { year: "2008", title: "First Yoga Certification", desc: "Completed 200-hour Hatha Yoga Teacher Training from Bihar School of Yoga." },
-  { year: "2010", title: "Opened First Studio", desc: "Founded the first Pankhlife yoga studio in Gurugram with 20 founding students." },
-  { year: "2013", title: "Advanced Therapy Training", desc: "Completed advanced therapeutic yoga specialisation for musculoskeletal conditions." },
-  { year: "2015", title: "500-Hour Certification", desc: "Received 500-hour advanced yoga teacher certification — one of India's top programmes." },
-  { year: "2018", title: "Ayurveda Integration", desc: "Completed diploma in Ayurvedic wellness coaching and integrated it into all programmes." },
-  { year: "2020", title: "Online Expansion", desc: "Launched the online platform during the pandemic, reaching students across 12 countries." },
-  { year: "2023", title: "1000 Students Milestone", desc: "Celebrated transforming over 1,000 students' lives through yoga and holistic wellness." },
+  { year: "2003", date: "2003 - 2004", title: "BEd in Yoga", desc: "" },
+  { year: "2021", date: "29 May 2021", title: "200 Hours Yoga Alliance Registered Yoga Teacher Programme", desc: "" },
+  { year: "2021", date: "9 May 2021", title: "Ayurveda Awareness Programme", desc: "" },
+  { year: "2021", date: "07 June 2021", title: "Vedique Nutrition Course", desc: "" },
+  { year: "2021", date: "22 Oct 2021", title: "300 Hours of Yoga Alliance Registered", desc: "" },
+  { year: "2021", date: "4 Dec 2021", title: "Therapeutic Yoga Training from Bodhi School of Yoga", desc: "" },
+  { year: "2022", date: "5 Jan 2022", title: "Weight Loss Coaching Program", desc: "" },
+  { year: "2022", date: "20 May 2022", title: "Face Yoga Teacher Training Course", desc: "" },
+  { year: "2022", date: "5 June 2022", title: "Mudra Therapy Certification Course", desc: "" },
+  { year: "2022", date: "8 Aug 2022", title: "Prenatal Yoga Teacher Training", desc: "" },
+  { year: "2022", date: "9 Aug 2022", title: "Cancer Nutrition Course", desc: "" },
+  { year: "2022", date: "26 Sept 2022", title: "Prana Yoga Teacher Training", desc: "" },
+  { year: "2023", date: "17 Feb 2023", title: "Bala Yoga Teacher Training", desc: "" },
+  { year: "2023", date: "21 July 2023", title: "Meditation Teacher Training", desc: "" },
+  { year: "2026", date: "14 May 2026", title: "Yin Yoga Teacher Training Course", desc: "" },
 ];
 
 const certifications = [
@@ -91,7 +99,7 @@ export default function AboutPage() {
           <motion.h1
             initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }}
             className="font-serif text-4xl sm:text-5xl font-light text-white"
-          >About Ms. Renu Patil</motion.h1>
+          >About Ms. Renu Patial</motion.h1>
         </div>
       </section>
 
@@ -104,7 +112,7 @@ export default function AboutPage() {
               A Life Devoted to Healing
             </motion.h2>
             <motion.p variants={fadeUp} className="text-muted-foreground leading-relaxed mb-4">
-              Ms. Renu Patil's journey with yoga began not in a studio but in a moment of personal crisis. At 28, facing burnout, chronic back pain, and a deep sense of disconnection, she discovered her first yoga class — and never looked back.
+              Ms. Renu Patial's journey with yoga began not in a studio but in a moment of personal crisis. At 28, facing burnout, chronic back pain, and a deep sense of disconnection, she discovered her first yoga class — and never looked back.
             </motion.p>
             <motion.p variants={fadeUp} className="text-muted-foreground leading-relaxed mb-4">
               What began as a tool for personal healing became a calling. She trained under some of India's most respected masters, immersing herself in Hatha yoga, therapeutic yoga, pranayama, and Ayurveda for years.
@@ -116,7 +124,7 @@ export default function AboutPage() {
           <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }}>
             <img
               src="/renu_arm_balance_1.png"
-              alt="Ms. Renu Patil practicing arm balance"
+              alt="Ms. Renu Patial practicing arm balance"
               className="rounded-3xl w-full h-[480px] object-cover shadow-lg"
             />
           </motion.div>
@@ -142,7 +150,7 @@ export default function AboutPage() {
       {/* Timeline */}
       <section className="py-20 px-4 max-w-4xl mx-auto">
         <motion.div variants={stagger} initial="hidden" whileInView="visible" viewport={{ once: true }} className="text-center mb-16">
-          <motion.p variants={fadeUp} className="text-primary text-sm uppercase tracking-widest font-sans mb-2">15+ Years</motion.p>
+          <motion.p variants={fadeUp} className="text-primary text-sm uppercase tracking-widest font-sans mb-2">24+ Years</motion.p>
           <motion.h2 variants={fadeUp} className="font-serif text-3xl sm:text-4xl font-light">The Journey</motion.h2>
         </motion.div>
         <div className="relative">
@@ -154,15 +162,15 @@ export default function AboutPage() {
             whileInView="visible"
             viewport={{ once: true }}
           >
-            {timeline.map((item) => (
-              <motion.div key={item.year} variants={fadeUp} className="flex gap-6 relative">
+            {timeline.map((item, index) => (
+              <motion.div key={index} variants={fadeUp} className="flex gap-6 relative">
                 <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center flex-shrink-0 z-10 text-primary-foreground text-xs font-bold font-sans">
                   {item.year.slice(2)}
                 </div>
                 <div className="pt-2">
-                  <p className="text-primary text-xs font-sans font-medium mb-1">{item.year}</p>
+                  <p className="text-primary text-xs font-sans font-medium mb-1">{item.date}</p>
                   <h3 className="font-serif text-lg font-medium mb-1">{item.title}</h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed">{item.desc}</p>
+                  {item.desc && <p className="text-muted-foreground text-sm leading-relaxed">{item.desc}</p>}
                 </div>
               </motion.div>
             ))}

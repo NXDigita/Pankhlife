@@ -132,7 +132,7 @@ export default function ClassesPage() {
                       <p className="text-xs text-muted-foreground">per month</p>
                     </div>
                     <a
-                      href="https://wa.me/911234567890"
+                      href="https://wa.me/919540116007"
                       target="_blank"
                       rel="noopener noreferrer"
                       data-testid={`book-${cls.id}`}
@@ -159,7 +159,7 @@ export default function ClassesPage() {
         <p className="text-primary-foreground/80 mb-8 font-sans text-sm max-w-md mx-auto">
           Message Ms. Renu directly on WhatsApp for a personalised recommendation based on your goals and experience.
         </p>
-        <a href="https://wa.me/911234567890" target="_blank" rel="noopener noreferrer">
+        <a href="https://wa.me/919540116007" target="_blank" rel="noopener noreferrer">
           <Button variant="secondary" size="lg" className="font-sans" data-testid="classes-whatsapp-cta">
             Ask Ms. Renu on WhatsApp
           </Button>

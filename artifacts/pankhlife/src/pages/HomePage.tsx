@@ -102,14 +102,14 @@ export default function HomePage({ onAddToCart }: HomePageProps) {
             transition={{ duration: 0.9, ease: "easeOut" }}
           >
             <Badge variant="secondary" className="mb-6 text-xs uppercase tracking-widest px-4 py-1">
-              15+ Years of Holistic Wellness
+              24+ Years of Holistic Wellness
             </Badge>
             <h1 className="font-serif text-4xl sm:text-5xl lg:text-7xl font-light text-white leading-tight mb-6">
               Transform Your Mind,<br />
               <em>Body &amp; Life</em> Naturally
             </h1>
             <p className="text-white/80 text-base sm:text-lg max-w-xl mx-auto font-light mb-10 leading-relaxed">
-              Guided by Ms. Renu Patil — 15+ years of experience in yoga, wellness, and holistic healing that meets you exactly where you are.
+              Guided by Ms. Renu Patial — 24+ years of experience in yoga, wellness, and holistic healing that meets you exactly where you are.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/classes">
@@ -118,7 +118,7 @@ export default function HomePage({ onAddToCart }: HomePageProps) {
                 </Button>
               </Link>
               <a
-                href="https://wa.me/911234567890"
+                href="https://wa.me/919540116007"
                 target="_blank"
                 rel="noopener noreferrer"
                 data-testid="hero-btn-whatsapp"
@@ -152,8 +152,8 @@ export default function HomePage({ onAddToCart }: HomePageProps) {
           >
             {[
               { value: 1000, suffix: "+", label: "Happy Students" },
-              { value: 15, suffix: "+", label: "Years of Experience" },
-              { value: 7, suffix: "", label: "Yoga Programs" },
+              { value: 24, suffix: "+", label: "Years of Experience" },
+              { value: 8, suffix: "", label: "Yoga Programs" },
               { value: 500, suffix: "+", label: "Transformations" },
             ].map((stat) => (
               <motion.div key={stat.label} variants={fadeUp}>
@@ -173,7 +173,7 @@ export default function HomePage({ onAddToCart }: HomePageProps) {
           <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }}>
             <img
               src="/renu_headstand.png"
-              alt="Ms. Renu Patil"
+              alt="Ms. Renu Patial"
               className="rounded-3xl w-full max-h-[520px] object-cover shadow-lg"
             />
           </motion.div>
@@ -182,10 +182,10 @@ export default function HomePage({ onAddToCart }: HomePageProps) {
               Meet Your Guide
             </motion.p>
             <motion.h2 variants={fadeUp} className="font-serif text-3xl sm:text-4xl font-light mb-5 leading-tight">
-              Ms. Renu Patil
+              Ms. Renu Patial
             </motion.h2>
             <motion.p variants={fadeUp} className="text-muted-foreground leading-relaxed mb-4">
-              With over 15 years of dedicated practice and teaching, Ms. Renu Patil has guided more than a thousand students toward greater health, peace, and self-understanding. Her approach weaves classical Hatha yoga with modern therapeutic insight and ancient Ayurvedic wisdom.
+              With over 24+ years of dedicated practice and teaching, Ms. Renu Patial has guided more than a thousand students toward greater health, peace, and self-understanding. Her approach weaves classical Hatha yoga with modern therapeutic insight and ancient Ayurvedic wisdom.
             </motion.p>
             <motion.p variants={fadeUp} className="text-muted-foreground leading-relaxed mb-8">
               She believes that yoga is not a performance — it is a conversation between the self and the present moment. Every class is a safe space for transformation, however small or profound.
