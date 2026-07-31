@@ -170,7 +170,7 @@ export const products: Product[] = [
     category: "Skin & Hair Care",
     rating: 4.6,
     reviews: 38,
-    image: "/divine_lotus_soap_nobg.jpg",
+    image: "/divine_lotus_soap_cropped.jpg",
     inStock: true,
   },
   {
@@ -181,7 +181,7 @@ export const products: Product[] = [
     category: "Skin & Hair Care",
     rating: 4.7,
     reviews: 41,
-    image: "/apricot_soap_nobg.jpg",
+    image: "/apricot_soap_cropped.jpg",
     inStock: true,
   },
   {
@@ -192,7 +192,7 @@ export const products: Product[] = [
     category: "Skin & Hair Care",
     rating: 4.8,
     reviews: 56,
-    image: "/sandalwood_soap_nobg.jpg",
+    image: "/sandalwood_soap_cropped.jpg",
     inStock: true,
   },
   {
@@ -203,7 +203,7 @@ export const products: Product[] = [
     category: "Skin & Hair Care",
     rating: 4.9,
     reviews: 77,
-    image: "/coffee_soap_nobg.jpg",
+    image: "/coffee_soap_cropped.jpg",
     inStock: true,
   },
   {
