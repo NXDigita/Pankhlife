@@ -13,8 +13,8 @@ import type { CartItem } from "@/components/layout/Layout";
 const fadeUp = { hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } };
 const stagger = { visible: { transition: { staggerChildren: 0.08 } } };
 
-type Category = "All" | "Yoga Mats" | "Accessories" | "Herbal Wellness" | "Meditation";
-const categories: Category[] = ["All", "Yoga Mats", "Accessories", "Herbal Wellness", "Meditation"];
+type Category = "All" | "Yoga Mats" | "Accessories" | "Herbal Wellness" | "Meditation" | "Skin & Hair Care";
+const categories: Category[] = ["All", "Yoga Mats", "Accessories", "Herbal Wellness", "Meditation", "Skin & Hair Care"];
 
 interface ShopPageProps {
   onAddToCart: (item: CartItem) => void;
@@ -115,11 +115,11 @@ export default function ShopPage({ onAddToCart }: ShopPageProps) {
                   data-testid={`product-${product.id}`}
                   onClick={() => { setSelectedProduct(product); setQty(1); }}
                 >
-                  <div className="relative h-52 overflow-hidden">
+                  <div className="relative h-56 overflow-hidden bg-white">
                     <img
                       src={product.image}
                       alt={product.name}
-                      className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                      className="w-full h-full object-contain p-2 hover:scale-105 transition-transform duration-500"
                     />
                     {product.badge && (
                       <Badge className="absolute top-2 left-2 text-xs">{product.badge}</Badge>
@@ -187,8 +187,8 @@ export default function ShopPage({ onAddToCart }: ShopPageProps) {
         <DialogContent className="max-w-2xl">
           {selectedProduct && (
             <div className="grid sm:grid-cols-2 gap-6">
-              <div className="rounded-xl overflow-hidden h-72 sm:h-full">
-                <img src={selectedProduct.image} alt={selectedProduct.name} className="w-full h-full object-cover" />
+              <div className="rounded-xl overflow-hidden h-72 sm:h-full bg-white flex items-center justify-center">
+                <img src={selectedProduct.image} alt={selectedProduct.name} className="w-full h-full object-contain p-2" />
               </div>
               <div>
                 <DialogHeader>
