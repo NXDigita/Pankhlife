@@ -86,19 +86,5 @@ export const classes: YogaClass[] = [
     image: "/renu_arm_balance_2.png",
     benefits: ["Pain relief", "Improved mobility", "Personalised care"],
   },
-  {
-    id: "online-classes",
-    title: "Online Classes",
-    description:
-      "Practise from the comfort of your home with live, interactive Zoom sessions. Recordings available for 24 hours after each class.",
-    duration: "60 min",
-    timing: "7:00 AM / 6:00 PM",
-    difficulty: "All Levels",
-    price: 799,
-    originalPrice: 1200,
-    type: "online",
-    session: "flexible",
-    image: "https://images.unsplash.com/photo-1599901860904-17e6ed7083a0?w=600&q=80",
-    benefits: ["Practise anywhere", "Flexible schedule", "Recorded sessions"],
-  },
+
 ];

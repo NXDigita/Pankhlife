@@ -11,9 +11,9 @@ import type { DayOfWeek } from "@/data/schedule";
 const fadeUp = { hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } };
 const stagger = { visible: { transition: { staggerChildren: 0.07 } } };
 
-type ClassTypeFilter = "All" | "Morning Yoga" | "Meditation" | "Pranayama" | "Weight Loss" | "Therapy Yoga" | "Online";
+type ClassTypeFilter = "All" | "Morning Yoga" | "Meditation" | "Pranayama" | "Weight Loss" | "Therapy Yoga";
 
-const typeFilters: ClassTypeFilter[] = ["All", "Morning Yoga", "Meditation", "Pranayama", "Weight Loss", "Therapy Yoga", "Online"];
+const typeFilters: ClassTypeFilter[] = ["All", "Morning Yoga", "Meditation", "Pranayama", "Weight Loss", "Therapy Yoga"];
 
 const dayAbbr: Record<DayOfWeek, string> = {
   Monday: "Mon", Tuesday: "Tue", Wednesday: "Wed",
@@ -65,106 +65,46 @@ export default function SchedulePage() {
           ))}
         </div>
 
-        <Tabs defaultValue="weekly">
-          <div className="flex justify-center mb-8">
-            <TabsList>
-              <TabsTrigger value="weekly" className="font-sans text-sm">Weekly Calendar</TabsTrigger>
-              <TabsTrigger value="daily" className="font-sans text-sm">Daily View</TabsTrigger>
-            </TabsList>
-          </div>
-
+        <div className="mt-8">
           {/* Weekly View */}
-          <TabsContent value="weekly">
-            <motion.div
-              className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-7 gap-4"
-              variants={stagger}
-              initial="hidden"
-              animate="visible"
-            >
-              {days.map((day) => {
-                const daySlots = weeklyFiltered.filter((s) => s.day === day);
-                return (
-                  <motion.div key={day} variants={fadeUp}>
-                    <div className="bg-card rounded-xl border border-border overflow-hidden">
-                      <div className="bg-primary text-primary-foreground py-2 px-3 text-center">
-                        <p className="font-sans font-semibold text-sm">{dayAbbr[day]}</p>
-                        <p className="text-primary-foreground/70 text-xs">{day}</p>
-                      </div>
-                      <div className="p-2 space-y-2 min-h-24">
-                        {daySlots.length === 0 ? (
-                          <p className="text-center text-xs text-muted-foreground py-4">No classes</p>
-                        ) : (
-                          daySlots.map((slot) => (
-                            <div
-                              key={slot.id}
-                              className={`p-2 rounded-lg border text-xs ${slot.color}`}
-                              data-testid={`slot-${slot.id}`}
-                            >
-                              <p className="font-semibold leading-tight">{slot.classTitle}</p>
-                              <p className="opacity-80">{slot.time}</p>
-                              <p className="opacity-70">{slot.duration}</p>
-                            </div>
-                          ))
-                        )}
-                      </div>
+          <motion.div
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-7 gap-4"
+            variants={stagger}
+            initial="hidden"
+            animate="visible"
+          >
+            {days.map((day) => {
+              const daySlots = weeklyFiltered.filter((s) => s.day === day);
+              return (
+                <motion.div key={day} variants={fadeUp}>
+                  <div className="bg-card rounded-xl border border-border overflow-hidden">
+                    <div className="bg-primary text-primary-foreground py-2 px-3 text-center">
+                      <p className="font-sans font-semibold text-sm">{dayAbbr[day]}</p>
+                      <p className="text-primary-foreground/70 text-xs">{day}</p>
                     </div>
-                  </motion.div>
-                );
-              })}
-            </motion.div>
-          </TabsContent>
-
-          {/* Daily View */}
-          <TabsContent value="daily">
-            {/* Day selector */}
-            <div className="flex flex-wrap gap-2 justify-center mb-8">
-              {days.map((day) => (
-                <Button
-                  key={day}
-                  variant={selectedDay === day ? "default" : "outline"}
-                  size="sm"
-                  className="font-sans text-xs rounded-full"
-                  onClick={() => setSelectedDay(day)}
-                  data-testid={`day-btn-${day.toLowerCase()}`}
-                >{dayAbbr[day]}</Button>
-              ))}
-            </div>
-
-            <div className="grid md:grid-cols-2 gap-8">
-              {/* Morning */}
-              <div>
-                <h3 className="font-serif text-xl font-medium mb-4 flex items-center gap-2">
-                  <span className="text-amber-500">&#9728;</span> Morning Sessions
-                </h3>
-                {morningSlots.length === 0 ? (
-                  <Card><CardContent className="p-6 text-center text-muted-foreground text-sm">No morning classes on {selectedDay}</CardContent></Card>
-                ) : (
-                  <motion.div className="space-y-4" variants={stagger} initial="hidden" animate="visible" key={`morning-${selectedDay}`}>
-                    {morningSlots.map((slot) => (
-                      <SlotCard key={slot.id} slot={slot} />
-                    ))}
-                  </motion.div>
-                )}
-              </div>
-
-              {/* Evening */}
-              <div>
-                <h3 className="font-serif text-xl font-medium mb-4 flex items-center gap-2">
-                  <span className="text-indigo-400">&#9790;</span> Evening Sessions
-                </h3>
-                {eveningSlots.length === 0 ? (
-                  <Card><CardContent className="p-6 text-center text-muted-foreground text-sm">No evening classes on {selectedDay}</CardContent></Card>
-                ) : (
-                  <motion.div className="space-y-4" variants={stagger} initial="hidden" animate="visible" key={`evening-${selectedDay}`}>
-                    {eveningSlots.map((slot) => (
-                      <SlotCard key={slot.id} slot={slot} />
-                    ))}
-                  </motion.div>
-                )}
-              </div>
-            </div>
-          </TabsContent>
-        </Tabs>
+                    <div className="p-2 space-y-2 min-h-24">
+                      {daySlots.length === 0 ? (
+                        <p className="text-center text-xs text-muted-foreground py-4">No classes</p>
+                      ) : (
+                        daySlots.map((slot) => (
+                          <div
+                            key={slot.id}
+                            className={`p-2 rounded-lg border text-xs ${slot.color}`}
+                            data-testid={`slot-${slot.id}`}
+                          >
+                            <p className="font-semibold leading-tight">{slot.classTitle}</p>
+                            <p className="opacity-80">{slot.time}</p>
+                            <p className="opacity-70">{slot.duration}</p>
+                          </div>
+                        ))
+                      )}
+                    </div>
+                  </div>
+                </motion.div>
+              );
+            })}
+          </motion.div>
+        </div>
       </div>
     </div>
   );

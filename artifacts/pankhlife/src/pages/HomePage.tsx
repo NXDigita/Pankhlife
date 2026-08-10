@@ -168,7 +168,16 @@ export default function HomePage({ onAddToCart }: HomePageProps) {
 
       {/* About */}
       <section className="py-20 px-4 max-w-7xl mx-auto">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
+        <motion.div variants={stagger} initial="hidden" whileInView="visible" viewport={{ once: true }} className="text-center mb-16">
+          <motion.p variants={fadeUp} className="text-primary text-sm uppercase tracking-widest font-sans mb-3">
+            Meet Your Guides
+          </motion.p>
+          <motion.h2 variants={fadeUp} className="font-serif text-3xl sm:text-4xl font-light leading-tight">
+            Our Experts
+          </motion.h2>
+        </motion.div>
+
+        <div className="grid md:grid-cols-2 gap-12 items-center mb-20">
           <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }}>
             <img
               src="/renu_headstand.png"
@@ -177,9 +186,6 @@ export default function HomePage({ onAddToCart }: HomePageProps) {
             />
           </motion.div>
           <motion.div variants={stagger} initial="hidden" whileInView="visible" viewport={{ once: true }}>
-            <motion.p variants={fadeUp} className="text-primary text-sm uppercase tracking-widest font-sans mb-3">
-              Meet Your Guide
-            </motion.p>
             <motion.h2 variants={fadeUp} className="font-serif text-3xl sm:text-4xl font-light mb-5 leading-tight">
               Ms. Renu Patial
             </motion.h2>
@@ -196,6 +202,27 @@ export default function HomePage({ onAddToCart }: HomePageProps) {
                 </Button>
               </Link>
             </motion.div>
+          </motion.div>
+        </div>
+
+        <div className="grid md:grid-cols-2 gap-12 items-center">
+          <motion.div variants={stagger} initial="hidden" whileInView="visible" viewport={{ once: true }} className="order-2 md:order-1">
+            <motion.h2 variants={fadeUp} className="font-serif text-3xl sm:text-4xl font-light mb-5 leading-tight">
+              Ms. Anjali Singh
+            </motion.h2>
+            <motion.p variants={fadeUp} className="text-muted-foreground leading-relaxed mb-4">
+              I am a Certified 500 Hours RYT Yoga Instructor and a qualified Nutritionist from the Innerworld Yoga Academy. With over two years of dedicated teaching experience, I have had the privilege of guiding both personal clients and Teacher Training Course (TTC) students.
+            </motion.p>
+            <motion.p variants={fadeUp} className="text-muted-foreground leading-relaxed mb-8">
+              Yoga and breathwork transformed my life, and today, I live my purpose - guiding others toward strength, balance, and inner harmony.
+            </motion.p>
+          </motion.div>
+          <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} className="order-1 md:order-2">
+            <img
+              src="/anjali_singh_real.jpg"
+              alt="Ms. Anjali Singh"
+              className="rounded-3xl w-full max-h-[520px] object-cover shadow-lg"
+            />
           </motion.div>
         </div>
       </section>

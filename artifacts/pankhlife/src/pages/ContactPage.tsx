@@ -171,45 +171,33 @@ export default function ContactPage() {
               ))}
             </motion.div>
 
-            {/* Social Links */}
-            <motion.div variants={fadeUp}>
-              <Card>
-                <CardContent className="p-4">
-                  <p className="text-xs text-muted-foreground font-sans uppercase tracking-wide mb-3">Follow Us</p>
-                  <div className="flex gap-4">
-                    {[
-                      { icon: <Instagram className="h-5 w-5" />, href: "https://instagram.com/pankhlife", label: "Instagram" },
-                      { icon: <Facebook className="h-5 w-5" />, href: "https://facebook.com/pankhlife", label: "Facebook" },
-                      { icon: <Youtube className="h-5 w-5" />, href: "https://youtube.com/@pankhlife", label: "YouTube" },
-                      { icon: <MessageCircle className="h-5 w-5" />, href: "https://wa.me/919540116007", label: "WhatsApp" },
-                    ].map((s) => (
-                      <a key={s.label} href={s.href} target="_blank" rel="noopener noreferrer"
-                        className="text-muted-foreground hover:text-primary transition-colors" data-testid={`contact-social-${s.label.toLowerCase()}`}>
-                        {s.icon}
-                      </a>
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
-            </motion.div>
 
-            {/* Map */}
-            <motion.div variants={fadeUp} className="rounded-2xl overflow-hidden border border-border h-64 bg-muted">
-              <iframe
-                src="https://maps.google.com/maps?q=Mapsko+Casabella,+Gurugram&t=&z=13&ie=UTF8&iwloc=&output=embed"
-                width="100%"
-                height="100%"
-                style={{ border: 0 }}
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                title="Pankhlife Studio Location"
-                data-testid="map-embed"
-              />
-            </motion.div>
           </motion.div>
         </div>
       </div>
+
+      {/* Follow Us Section */}
+      <section className="py-16 bg-muted/30 border-t border-border">
+        <div className="max-w-4xl mx-auto px-4 text-center">
+          <motion.div variants={stagger} initial="hidden" whileInView="visible" viewport={{ once: true }}>
+            <motion.h2 variants={fadeUp} className="font-serif text-3xl font-light mb-8">Follow Us</motion.h2>
+            <motion.div variants={fadeUp} className="flex gap-8 justify-center flex-wrap">
+              {[
+                { icon: <Instagram className="h-10 w-10" />, href: "https://instagram.com/pankhlife", label: "Instagram" },
+                { icon: <Facebook className="h-10 w-10" />, href: "https://facebook.com/pankhlife", label: "Facebook" },
+                { icon: <Youtube className="h-10 w-10" />, href: "https://youtube.com/@pankhlife", label: "YouTube" },
+                { icon: <MessageCircle className="h-10 w-10" />, href: "https://wa.me/919540116007", label: "WhatsApp" },
+              ].map((s) => (
+                <a key={s.label} href={s.href} target="_blank" rel="noopener noreferrer"
+                  className="bg-background border border-border p-6 rounded-2xl text-primary hover:text-primary hover:bg-primary/5 hover:scale-105 hover:shadow-lg transition-all duration-300 flex flex-col items-center gap-3 w-32" data-testid={`contact-social-${s.label.toLowerCase()}`}>
+                  {s.icon}
+                  <span className="text-sm font-sans font-medium">{s.label}</span>
+                </a>
+              ))}
+            </motion.div>
+          </motion.div>
+        </div>
+      </section>
     </div>
   );
 }

@@ -18,7 +18,7 @@ import AdminPage from "@/pages/AdminPage";
 import BlogPage from "@/pages/BlogPage";
 import BlogPostPage from "@/pages/BlogPostPage";
 import BookTrialPage from "@/pages/BookTrialPage";
-import AnjaliSinghPage from "@/pages/AnjaliSinghPage";
+
 import NotFound from "@/pages/not-found";
 
 const queryClient = new QueryClient();
@@ -75,7 +75,7 @@ function App() {
                 <Route path="/blog" component={BlogPage} />
                 <Route path="/blog/:slug" component={BlogPostPage} />
                 <Route path="/book-trial" component={BookTrialPage} />
-                <Route path="/anjali-singh" component={AnjaliSinghPage} />
+
                 <Route component={NotFound} />
               </Switch>
             </Layout>

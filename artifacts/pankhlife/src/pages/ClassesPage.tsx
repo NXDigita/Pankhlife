@@ -62,22 +62,6 @@ export default function ClassesPage() {
       </section>
 
       <section className="py-16 px-4 max-w-7xl mx-auto">
-        {/* Filter Bar */}
-        <div className="flex flex-wrap gap-2 justify-center mb-12">
-          {filters.map((f) => (
-            <Button
-              key={f.value}
-              variant={active === f.value ? "default" : "outline"}
-              size="sm"
-              className="font-sans text-sm rounded-full"
-              onClick={() => setActive(f.value)}
-              data-testid={`filter-${f.value}`}
-            >
-              {f.label}
-            </Button>
-          ))}
-        </div>
-
         {/* Classes Grid */}
         <motion.div
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"

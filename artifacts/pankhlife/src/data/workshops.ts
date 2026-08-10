@@ -55,36 +55,5 @@ export const workshops: Workshop[] = [
     highlights: ["Daily live sessions", "WhatsApp community support", "Recorded classes", "E-certificate"],
     spotsLeft: 14,
   },
-  {
-    id: "corporate-wellness",
-    title: "Corporate Wellness Workshop",
-    description:
-      "A half-day workshop designed for working professionals — desk yoga, breathwork for focus, and stress-release techniques you can use at your desk.",
-    date: addDays(20),
-    endDate: addDays(20),
-    duration: "4 hours",
-    price: 899,
-    originalPrice: 1299,
-    discount: 30,
-    badge: "Early Bird",
-    image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=700&q=80",
-    highlights: ["Desk yoga techniques", "Breathwork for focus", "Group Q&A", "Resource booklet"],
-    spotsLeft: 22,
-  },
-  {
-    id: "beginners-immersion",
-    title: "Yoga for Absolute Beginners",
-    description:
-      "A nurturing weekend immersion to help you build a strong, safe foundation. No prior experience required — just an open heart and a yoga mat.",
-    date: addDays(8),
-    endDate: addDays(9),
-    duration: "2 days",
-    price: 1799,
-    originalPrice: 2999,
-    discount: 40,
-    badge: "New Batch",
-    image: "https://images.unsplash.com/photo-1588286840104-8957b019727f?w=700&q=80",
-    highlights: ["Foundations of asana", "Beginner-friendly breathwork", "Q&A with Ms. Renu", "Practice guide to take home"],
-    spotsLeft: 10,
-  },
+
 ];
