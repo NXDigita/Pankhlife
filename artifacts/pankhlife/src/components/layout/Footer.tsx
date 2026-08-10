@@ -26,10 +26,10 @@ export function Footer() {
               Awakening wellness, one breath at a time. Guided by Ms. Renu Patial — 24+ years of transforming lives through the ancient wisdom of yoga.
             </p>
             <div className="flex items-center gap-3">
-              <a href="https://instagram.com/pankhlife" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors" data-testid="social-instagram">
+              <a href="https://www.instagram.com/_renu_patial_" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors" data-testid="social-instagram">
                 <Instagram className="h-5 w-5" />
               </a>
-              <a href="https://facebook.com/pankhlife" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors" data-testid="social-facebook">
+              <a href="https://www.facebook.com/share/1LZFNo9Q7n/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors" data-testid="social-facebook">
                 <Facebook className="h-5 w-5" />
               </a>
               <a href="https://youtube.com/@pankhlife" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors" data-testid="social-youtube">

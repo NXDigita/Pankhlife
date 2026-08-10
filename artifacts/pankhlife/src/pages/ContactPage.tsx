@@ -183,8 +183,8 @@ export default function ContactPage() {
             <motion.h2 variants={fadeUp} className="font-serif text-3xl font-light mb-8">Follow Us</motion.h2>
             <motion.div variants={fadeUp} className="flex gap-8 justify-center flex-wrap">
               {[
-                { icon: <Instagram className="h-10 w-10" />, href: "https://instagram.com/pankhlife", label: "Instagram" },
-                { icon: <Facebook className="h-10 w-10" />, href: "https://facebook.com/pankhlife", label: "Facebook" },
+                { icon: <Instagram className="h-10 w-10" />, href: "https://www.instagram.com/_renu_patial_", label: "Instagram" },
+                { icon: <Facebook className="h-10 w-10" />, href: "https://www.facebook.com/share/1LZFNo9Q7n/", label: "Facebook" },
                 { icon: <Youtube className="h-10 w-10" />, href: "https://youtube.com/@pankhlife", label: "YouTube" },
                 { icon: <MessageCircle className="h-10 w-10" />, href: "https://wa.me/919540116007", label: "WhatsApp" },
               ].map((s) => (
