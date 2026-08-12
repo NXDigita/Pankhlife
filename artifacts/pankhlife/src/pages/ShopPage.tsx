@@ -55,13 +55,13 @@ export default function ShopPage({ onAddToCart }: ShopPageProps) {
   return (
     <div>
       {/* Hero */}
-      <section className="relative h-64 sm:h-80 flex items-center justify-center overflow-hidden">
+      <section className="relative h-64 sm:h-80 flex items-center justify-center overflow-hidden bg-[#e8e4dc]">
         <img
-          src="https://images.unsplash.com/photo-1601925260368-ae2f83cf8b7f?w=1400&q=80"
-          alt="Wellness Shop"
-          className="absolute inset-0 w-full h-full object-cover"
+          src="/bath_salts_ai.png"
+          alt="New Launch Bath Salts"
+          className="absolute inset-0 w-full h-full object-cover object-center"
         />
-        <div className="absolute inset-0 bg-black/55" />
+        <div className="absolute inset-0 bg-black/40" />
         <div className="relative z-10 text-center px-4">
           <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="text-white/70 text-sm uppercase tracking-widest font-sans mb-3">
             Curated for Your Practice
