@@ -13,15 +13,15 @@ import type { CartItem } from "@/components/layout/Layout";
 const fadeUp = { hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } };
 const stagger = { visible: { transition: { staggerChildren: 0.08 } } };
 
-type Category = "All" | "Yoga Mats" | "Accessories" | "Herbal Wellness" | "Meditation" | "Skin & Hair Care";
-const categories: Category[] = ["All", "Yoga Mats", "Accessories", "Herbal Wellness", "Meditation", "Skin & Hair Care"];
+type Category = "Skin & Hair Care";
+const categories: Category[] = ["Skin & Hair Care"];
 
 interface ShopPageProps {
   onAddToCart: (item: CartItem) => void;
 }
 
 export default function ShopPage({ onAddToCart }: ShopPageProps) {
-  const [category, setCategory] = useState<Category>("All");
+  const [category, setCategory] = useState<Category>("Skin & Hair Care");
   const [search, setSearch] = useState("");
   const [wishlist, setWishlist] = useState<Set<string>>(new Set());
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
@@ -29,7 +29,7 @@ export default function ShopPage({ onAddToCart }: ShopPageProps) {
   const [addedIds, setAddedIds] = useState<Set<string>>(new Set());
 
   const filtered = products.filter((p) => {
-    const matchCat = category === "All" || p.category === category;
+    const matchCat = p.category === category;
     const matchSearch = p.name.toLowerCase().includes(search.toLowerCase()) || p.category.toLowerCase().includes(search.toLowerCase());
     return matchCat && matchSearch;
   });
@@ -73,9 +73,9 @@ export default function ShopPage({ onAddToCart }: ShopPageProps) {
       </section>
 
       <div className="max-w-7xl mx-auto px-4 py-12">
-        {/* Search & Filter */}
-        <div className="flex flex-col sm:flex-row gap-4 mb-8">
-          <div className="relative flex-1 max-w-sm">
+        {/* Search */}
+        <div className="mb-8">
+          <div className="relative max-w-sm">
             <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
             <Input
               placeholder="Search products..."
@@ -84,18 +84,6 @@ export default function ShopPage({ onAddToCart }: ShopPageProps) {
               className="pl-10 text-sm"
               data-testid="shop-search"
             />
-          </div>
-          <div className="flex flex-wrap gap-2">
-            {categories.map((cat) => (
-              <Button
-                key={cat}
-                variant={category === cat ? "default" : "outline"}
-                size="sm"
-                className="font-sans text-xs rounded-full"
-                onClick={() => setCategory(cat)}
-                data-testid={`cat-filter-${cat.toLowerCase().replace(" ", "-")}`}
-              >{cat}</Button>
-            ))}
           </div>
         </div>
 

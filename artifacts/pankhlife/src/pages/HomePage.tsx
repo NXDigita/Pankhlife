@@ -225,6 +225,30 @@ export default function HomePage({ onAddToCart }: HomePageProps) {
             />
           </motion.div>
         </div>
+
+        <div className="grid md:grid-cols-2 gap-12 items-center mt-20">
+          <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }}>
+            <img
+              src="/jyoti_yadav.png"
+              alt="Ms. Jyoti Yadav"
+              className="rounded-3xl w-full max-h-[520px] object-cover shadow-lg"
+            />
+          </motion.div>
+          <motion.div variants={stagger} initial="hidden" whileInView="visible" viewport={{ once: true }}>
+            <motion.h2 variants={fadeUp} className="font-serif text-3xl sm:text-4xl font-light mb-5 leading-tight">
+              Ms. Jyoti Yadav
+            </motion.h2>
+            <motion.p variants={fadeUp} className="text-muted-foreground leading-relaxed mb-4">
+              A pioneer in holistic nutrition, Dietitian Jyoti Yadav blends science with practical lifestyle changes. Her approach goes beyond "quick fixes," offering tools for lifelong wellness through her S.M.I.L.E framework: sustainable choices, mindful eating, individualized plans, lifestyle integration, and empowerment. "Nutrition is more than food; it's about cultivating habits that last a lifetime."
+            </motion.p>
+            <motion.p variants={fadeUp} className="text-muted-foreground leading-relaxed mb-4">
+              "Every diet has its pros and cons, but it's important to understand that no one diet fits all." By tailoring plans to each client's unique physiology, she specializes in weight management, PCOD/PCOS reversal, thyroid health, and managing gut health.
+            </motion.p>
+            <motion.p variants={fadeUp} className="text-muted-foreground leading-relaxed mb-8">
+              She aims to be a successful professional in the field of education, utilizing her knowledge and skills to teach students with great enthusiasm and a dedication to helping others improve their health.
+            </motion.p>
+          </motion.div>
+        </div>
       </section>
 
       {/* Benefits */}
